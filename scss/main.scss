@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+@import 'config';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $lightGrayBlue;
+}
+
+.container {
+  width: 80vw;
+  margin: 2rem auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding: 10px 0;
+
+  .item {
+    border-radius: 15px;
+    padding: 2.5rem;
+    color: $lightGray;
+    box-shadow: $boxShadow;
+    line-height: 1.5rem;
+
+    &-head {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      line-height: 1rem;
+
+      img {
+        border-radius: 50%;
+        margin-right: 1.5rem;
+      }
+    }
+
+    &-user h3 {
+      margin-bottom: .3rem;
+    }
+
+    &-user h4 {
+      opacity: 50%;
+    }
+    
+    &-content h2 {
+      margin-bottom: 1.5rem;
+      line-height: 2rem;
+    }
+
+    &-content p {
+      opacity: 70%;
+    }
+  }
+  
+  .item-1 {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    background-color: $violet;
+    color: set-text-color($violet);
+    position: relative;
+
+    .quotes {
+      position: absolute;
+      top: 0; 
+      right: 15%;
+      height: 150px;
+      width: 150px;
+      z-index: 0;
+    }
+
+    .item-head {
+      img {
+        border: 3px solid #A775F1;
+      }
+    }
+
+    .item-content {
+      position: relative;
+      z-index: 1;
+    }
+  }
+  
+  .item-2 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    background-color: $darkGrayBlue;
+    color: set-text-color($darkGrayBlue);
+  }
+  
+  .item-3 {
+    grid-column: 4/5;
+    grid-row: 1/3;
+    background-color: #fefefe;
+    color: set-text-color(#fefefe);
+  }
+  
+  .item-4 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    background-color: #fefefe;
+    color: set-text-color(#fefefe);
+  }
+  
+  .item-5 {
+    grid-column: 2/4;
+    grid-row: 2/3;
+    background-color: $darkBlackBlue;
+    color: set-text-color($darkBlackBlue);
+
+    .item-head {
+      img {
+        border: 3px solid #A775F1;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 900px){
+  body {
+    height: 100%;
+  }
+
+  .grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item-1 {
+    .item-head {
+      z-index: 1;
+      position: relative;
+    }
+    .quotes {
+      right: 5%;
+    }
+  }
+}

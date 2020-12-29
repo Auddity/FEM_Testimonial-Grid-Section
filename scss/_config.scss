@@ -1,0 +1,14 @@
+$violet: hsl(263, 55%, 52%);
+$darkGrayBlue: hsl(217, 19%, 35%);
+$darkBlackBlue: hsl(219, 29%, 14%);
+$lightGray: hsl(0, 0%, 81%);
+$lightGrayBlue: hsl(210, 46%, 95%);
+$boxShadow: 5px 5px 5px rgba(0,0,0,0.04);
+
+@function set-text-color($color) {
+  @if(lightness($color) > 60) {
+    @return $darkGrayBlue;
+  } @else {
+    @return $lightGrayBlue;
+  }
+}
