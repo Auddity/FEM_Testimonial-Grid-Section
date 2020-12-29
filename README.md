@@ -2,4 +2,4 @@
 
 Challenge from [Frontend Mentor](https://www.frontendmentor.io)
 
-Styled using **#Sass**
+Styled using **Sass**
